@@ -1,0 +1,29 @@
+{{#if isModalShowing}}
+  {{#modal-dialog onClose="closeModal" targetAttachment="center" translucentOverlay=true}}
+    <div class="ember-modal-dialog-base text-center">
+      Select {{selectedPlayer.name}}?
+      <button type="button" name="button" class="btn btn-success" {{action 'toggleModalAndRedirect'}}>Yes</button>
+      <button type="button" name="button" class="btn btn-danger" {{action 'closeModal'}}>No</button>
+    </div>
+  {{/modal-dialog}}
+{{/if}}
+
+<h1>/index</h1>
+<hr>
+<div class="container-fluid">
+  <div class="row">
+    {{#each model as |player|}}
+      <div class="col-xs-3 {{if (equals selected player.id) 'selected'}}">
+        <p>{{player.name}}</p>
+        <p>{{player.baseAtaque}}</p>
+        <p>{{player.baseDefensa}}</p>
+        <p>{{player.baseVelocidad}}</p>
+        <button type="button" name="button" class="btn btn-success" {{action 'selectPlayer' player.id}}>
+          Select
+        </button>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+{{outlet}}

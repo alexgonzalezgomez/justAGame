@@ -1,0 +1,57 @@
+@import 'bootstrap';
+// ember-modal-dialog
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
+@import 'pages/home';
+@import 'pages/index';
+
+
+// override ember-modal-dialog
+
+.ember-modal-dialog {
+  width: 80vh;
+  // override padding, we will always have to add a div.ember-modal-dialog-base
+  padding: 0;
+  &-base {
+    padding: 1rem;
+  }
+}
+
+
+
+.application {
+  &__header {
+    height: 6rem;
+    background: red;
+    top: 0;
+  }
+  &__footer {
+    height: 6rem;
+    background: green;
+    bottom: 0;
+  }
+  &__header,
+  &__footer {
+    width: 100%;
+  }
+  &--fixed {
+    position: fixed;
+  }
+}
+.main-wrapper {
+  width: 100%;
+  position: relative;
+  top: 6rem;
+  bottom: 6rem;
+  height: auto;
+}
+
+
+// index selected
+
+.selected {
+  border: 2px solid green;
+}
+// override for padding/margin ... etc
+@import 'basic';

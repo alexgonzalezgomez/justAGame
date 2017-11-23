@@ -1,0 +1,51 @@
+.padding {
+  &-0 {
+    padding: 0;
+  }
+  &-top {
+    &-basic {
+      padding-top: 1rem;
+    }
+  }
+  &-bottom {
+    &-basic {
+      padding-bottom: 1rem;
+    }
+  }
+  &-left {
+    &-basic {
+      padding-left: 1rem;
+    }
+  }
+  &-right {
+    &-basic {
+      padding-right: 1rem;
+    }
+  }
+}
+
+.margin {
+  &-0 {
+    margin: 0;
+  }
+  &-top {
+    &-basic {
+      margin-top: 1rem;
+    }
+  }
+  &-bottom {
+    &-basic {
+      margin-bottom: 1rem;
+    }
+  }
+  &-left {
+    &-basic {
+      margin-left: 1rem;
+    }
+  }
+  &-right {
+    &-basic {
+      margin-right: 1rem;
+    }
+  }
+}

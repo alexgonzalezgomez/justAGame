@@ -1,0 +1,21 @@
+{{outlet}}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 home__map-title">
+      Map
+    </div>
+    {{!-- <div class="col-xs-12 home__map padding-0"> --}}
+    {{#leaflet-map class="col-xs-12 home__map padding-0" lat=lat lng=lng zoom=zoom}}
+    {{tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"}}
+
+      {{#each mapPoint as |point|}}
+        {{#marker-layer location=point.location}}
+          {{#popup-layer}}
+            point
+          {{/popup-layer}}
+        {{/marker-layer}}
+      {{/each}}
+    {{/leaflet-map}}
+    {{!-- </div> --}}
+  </div>
+</div>
