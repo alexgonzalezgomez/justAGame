@@ -2,8 +2,6 @@ import Controller from '@ember/controller';
 import { later } from '@ember/runloop';
 import { computed } from '@ember/object';
 
-import { writeTextFile } from '../utils/read-write-files';
-
 export default Controller.extend({
 
   selected: null,
